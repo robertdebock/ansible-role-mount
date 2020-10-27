@@ -116,36 +116,3 @@
   loop: "{{ mount_requests }}"
   loop_control:
     label: "{{ item.path }}"
-
-- name: test if item.owner in mount_requests is set correctly
-  assert:
-    that:
-      - item.owner | length > 0
-    quiet: yes
-  loop: "{{ mount_requests }}"
-  loop_control:
-    label: "{{ item.path }}"
-  when:
-    - item.owner is defined
-
-- name: test if item.group in mount_requests is set correctly
-  assert:
-    that:
-      - item.group | length > 0
-    quiet: yes
-  loop: "{{ mount_requests }}"
-  loop_control:
-    label: "{{ item.path }}"
-  when:
-    - item.group is defined
-
-- name: test if item.mode in mount_requests is set correctly
-  assert:
-    that:
-      - item.mode | length > 0
-    quiet: yes
-  loop: "{{ mount_requests }}"
-  loop_control:
-    label: "{{ item.path }}"
-  when:
-    - item.mode is defined

@@ -90,7 +90,7 @@ These variables are set in `defaults/main.yml`:
 # defaults file for mount
 
 # You can define mounts as variables. All parameters for the `mount` module are
-# supported. On top of that, `mode`, `owner` and `group` can be defined.
+# supported.
 
 # mount_requests:
 #   - path: /mnt/tmp
@@ -98,9 +98,6 @@ These variables are set in `defaults/main.yml`:
 #     opts: bind
 #     state: mounted
 #     fstype: none
-#     owner: root
-#     group: root
-#     mode: "0750"
 ```
 
 ## [Requirements](#requirements)
