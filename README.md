@@ -58,6 +58,7 @@ For verification `molecule/resources/verify.yml` runs after the role has been ap
       file:
         path: /mnt/tmp/some_file.txt
         state: touch
+        mode: "0644"
 
     - name: unmount
       mount:
