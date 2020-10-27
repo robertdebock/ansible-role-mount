@@ -4,24 +4,6 @@
   include_tasks: assert.yml
   run_once: yes
 
-- name: create mountpoint
-  file:
-    path: "{{ item.path }}"
-    state: directory
-    owner: "{{ item.owner | default(omit) }}"
-    group: "{{ item.group | default(omit) }}"
-    mode: "{{ item.mode | default(omit) }}"
-    modification_time: preserve
-    access_time: preserve
-  loop: "{{ mount_requests }}"
-  loop_control:
-    label: "{{ item.path }}"
-  when:
-    - mount_requests is defined
-    - item.owner is defined or
-      item.group is defined or
-      item.mode is defined
-
 - name: mount requested mounts
   mount:
     backup: "{{ item.backup | default(omit) }}"

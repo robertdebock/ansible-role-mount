@@ -4,7 +4,7 @@ Configure mounts
 
 |Travis|GitHub|Quality|Downloads|Version|
 |------|------|-------|---------|-------|
-|[![travis](https://travis-ci.com/robertdebock/ansible-role-mount.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-mount)|[![github](https://github.com/robertdebock/ansible-role-mount/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-mount/actions)|[![quality](https://img.shields.io/ansible/quality/)](https://galaxy.ansible.com/robertdebock/mount)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/robertdebock/mount)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-mount.svg)](https://github.com/robertdebock/ansible-role-mount/releases/)|
+|[![travis](https://travis-ci.com/robertdebock/ansible-role-mount.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-mount)|[![github](https://github.com/robertdebock/ansible-role-mount/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-mount/actions)|[![quality](https://img.shields.io/ansible/quality/51485)](https://galaxy.ansible.com/robertdebock/mount)|[![downloads](https://img.shields.io/ansible/role/d/51485)](https://galaxy.ansible.com/robertdebock/mount)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-mount.svg)](https://github.com/robertdebock/ansible-role-mount/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -53,9 +53,6 @@ For verification `molecule/resources/verify.yml` runs after the role has been ap
       register: mount_check_directory
       failed_when:
         - not mount_check_directory.stat.exists
-        # - mount_check_directory.stat.mode != "0750"
-        # - mount_check_directory.stat.pw_name != "root"
-        # - mount_check_directory.stat.gr_name != "root"
 
     - name: place some file
       file:

@@ -11,9 +11,6 @@
       register: mount_check_directory
       failed_when:
         - not mount_check_directory.stat.exists
-        # - mount_check_directory.stat.mode != "0750"
-        # - mount_check_directory.stat.pw_name != "root"
-        # - mount_check_directory.stat.gr_name != "root"
 
     - name: place some file
       file:
