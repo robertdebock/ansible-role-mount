@@ -55,7 +55,7 @@
   assert:
     that:
       - item.fstype | length > 0
-      - item.fstype in ["ext3", "ext4", "iso9660", "nfs", "none", "xfs"]
+      - item.fstype in [ "ext3", "ext4", "iso9660", "nfs", "none", "xfs" ]
     quiet: yes
   loop: "{{ mount_requests }}"
   loop_control:
@@ -111,7 +111,7 @@
     that:
       - item.state is defined
       - item.state | length > 0
-      - item.state in ["absent", "mounted", "present", "remounted", "unmounted"]
+      - item.state in [ "absent", "mounted", "present", "remounted", "unmounted" ]
     quiet: yes
   loop: "{{ mount_requests }}"
   loop_control:
