@@ -28,26 +28,6 @@
   when:
     - item.boot is defined
 
-- name: test if item.dump in mount_requests is set correctly
-  assert:
-    that:
-    quiet: yes
-  loop: "{{ mount_requests }}"
-  loop_control:
-    label: "{{ item.path }}"
-  when:
-    - item.dump is defined
-
-- name: test if item.fstab in mount_requests is set correctly
-  assert:
-    that:
-    quiet: yes
-  loop: "{{ mount_requests }}"
-  loop_control:
-    label: "{{ item.path }}"
-  when:
-    - item.fstab is defined
-
 - name: test if item.fstype in mount_requests is set correctly
   assert:
     that:
@@ -59,26 +39,6 @@
   when:
     - item.fstype is defined
 
-- name: test if item.opts in mount_requests is set correctly
-  assert:
-    that:
-    quiet: yes
-  loop: "{{ mount_requests }}"
-  loop_control:
-    label: "{{ item.path }}"
-  when:
-    - item.opts is defined
-
-- name: test if item.passno in mount_requests is set correctly
-  assert:
-    that:
-    quiet: yes
-  loop: "{{ mount_requests }}"
-  loop_control:
-    label: "{{ item.path }}"
-  when:
-    - item.passno is defined
-
 - name: test if item.path in mount_requests is set correctly
   assert:
     that:
@@ -87,16 +47,6 @@
   loop: "{{ mount_requests }}"
   loop_control:
     label: "{{ item.path }}"
-
-- name: test if item.src in mount_requests is set correctly
-  assert:
-    that:
-    quiet: yes
-  loop: "{{ mount_requests }}"
-  loop_control:
-    label: "{{ item.path }}"
-  when:
-    - item.src is defined
 
 - name: test if item.state in mount_requests is set correctly
   assert:
