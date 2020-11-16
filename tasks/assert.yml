@@ -3,7 +3,6 @@
   assert:
     that:
       - mount_requests is defined
-      - mount_requests | length > 0
       - mount_requests is iterable
     quiet: yes
 
@@ -32,7 +31,6 @@
 - name: test if item.dump in mount_requests is set correctly
   assert:
     that:
-      - item.dump | length > 0
     quiet: yes
   loop: "{{ mount_requests }}"
   loop_control:
@@ -43,7 +41,6 @@
 - name: test if item.fstab in mount_requests is set correctly
   assert:
     that:
-      - item.fstab | length > 0
     quiet: yes
   loop: "{{ mount_requests }}"
   loop_control:
@@ -54,7 +51,6 @@
 - name: test if item.fstype in mount_requests is set correctly
   assert:
     that:
-      - item.fstype | length > 0
       - item.fstype in [ "ext3", "ext4", "iso9660", "nfs", "none", "xfs" ]
     quiet: yes
   loop: "{{ mount_requests }}"
@@ -66,7 +62,6 @@
 - name: test if item.opts in mount_requests is set correctly
   assert:
     that:
-      - item.opts | length > 0
     quiet: yes
   loop: "{{ mount_requests }}"
   loop_control:
@@ -77,7 +72,6 @@
 - name: test if item.passno in mount_requests is set correctly
   assert:
     that:
-      - item.passno | length > 0
     quiet: yes
   loop: "{{ mount_requests }}"
   loop_control:
@@ -89,7 +83,6 @@
   assert:
     that:
       - item.path is defined
-      - item.path | length > 0
     quiet: yes
   loop: "{{ mount_requests }}"
   loop_control:
@@ -98,7 +91,6 @@
 - name: test if item.src in mount_requests is set correctly
   assert:
     that:
-      - item.src | length > 0
     quiet: yes
   loop: "{{ mount_requests }}"
   loop_control:
@@ -110,7 +102,6 @@
   assert:
     that:
       - item.state is defined
-      - item.state | length > 0
       - item.state in [ "absent", "mounted", "present", "remounted", "unmounted" ]
     quiet: yes
   loop: "{{ mount_requests }}"
