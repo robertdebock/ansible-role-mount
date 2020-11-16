@@ -10,7 +10,7 @@
 - name: test if item.backup in mount_requests is set correctly
   assert:
     that:
-      - item.backup | type_debug == "bool"
+      - item.backup is boolean
     quiet: yes
   loop: "{{ mount_requests }}"
   loop_control:
@@ -21,7 +21,7 @@
 - name: test if item.boot in mount_requests is set correctly
   assert:
     that:
-      - item.boot | type_debug == "bool"
+      - item.boot is boolean
     quiet: yes
   loop: "{{ mount_requests }}"
   loop_control:
