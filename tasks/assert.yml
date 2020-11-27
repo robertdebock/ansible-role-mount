@@ -32,6 +32,7 @@
 - name: test if item.fstype in mount_requests is set correctly
   assert:
     that:
+      - item.fstype is string
       - item.fstype in [ "ext3", "ext4", "iso9660", "nfs", "none", "xfs" ]
     quiet: yes
   loop: "{{ mount_requests }}"
@@ -44,6 +45,7 @@
   assert:
     that:
       - item.path is defined
+      - item.path is string
     quiet: yes
   loop: "{{ mount_requests }}"
   loop_control:
@@ -53,6 +55,7 @@
   assert:
     that:
       - item.state is defined
+      - item.state is string
       - item.state in [ "absent", "mounted", "present", "remounted", "unmounted" ]
     quiet: yes
   loop: "{{ mount_requests }}"
