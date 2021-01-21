@@ -24,6 +24,7 @@ This example is taken from `molecule/resources/converge.yml` and is tested on ea
           opts: bind
           state: mounted
           fstype: none
+          mode: "1777"
 ```
 
 The machine needs to be prepared in CI this is done using `molecule/resources/prepare.yml`:

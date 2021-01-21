@@ -12,3 +12,4 @@
           opts: bind
           state: mounted
           fstype: none
+          mode: "1777"
