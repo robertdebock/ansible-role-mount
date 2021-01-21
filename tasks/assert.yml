@@ -1,5 +1,26 @@
 ---
 
+- name: test if mount_default_mode is set correctly
+  assert:
+    that:
+      - mount_default_mode is defined
+      - mount_default_mode is string
+    quiet: yes
+
+- name: test if mount_default_owner is set correctly
+  assert:
+    that:
+      - mount_default_owner is defined
+      - mount_default_owner is string
+    quiet: yes
+
+- name: test if mount_default_group is set correctly
+  assert:
+    that:
+      - mount_default_group is defined
+      - mount_default_group is string
+    quiet: yes
+
 - name: test if mount_requests is set correctly
   assert:
     that:

@@ -6,6 +6,19 @@
   run_once: yes
   delegate_to: localhost
 
+- name: create mountpoint
+  file:
+    path: "{{ item.path }}"
+    state: directory
+    mode: "{{ item.mode | default(mount_default_mode }}"
+    owner: "{{ item.owner | default(mount_default_owner }}"
+    group: "{{ item.group | default(mount_default_group }}"
+  loop: "{{ mount_requests }}"
+  loop_control:
+    label: "{{ item.path }}"
+  when:
+    - mount_requests is defined
+
 - name: mount requested mounts
   mount:
     backup: "{{ item.backup | default(omit) }}"
