@@ -1,35 +1,35 @@
 ---
 
 - name: test if mount_default_mode is set correctly
-  assert:
+  ansible.builtin.assert:
     that:
       - mount_default_mode is defined
       - mount_default_mode is string
     quiet: yes
 
 - name: test if mount_default_owner is set correctly
-  assert:
+  ansible.builtin.assert:
     that:
       - mount_default_owner is defined
       - mount_default_owner is string
     quiet: yes
 
 - name: test if mount_default_group is set correctly
-  assert:
+  ansible.builtin.assert:
     that:
       - mount_default_group is defined
       - mount_default_group is string
     quiet: yes
 
 - name: test if mount_requests is set correctly
-  assert:
+  ansible.builtin.assert:
     that:
       - mount_requests is defined
       - mount_requests is iterable
     quiet: yes
 
 - name: test if item.backup in mount_requests is set correctly
-  assert:
+  ansible.builtin.assert:
     that:
       - item.backup is boolean
     quiet: yes
@@ -40,7 +40,7 @@
     - item.backup is defined
 
 - name: test if item.boot in mount_requests is set correctly
-  assert:
+  ansible.builtin.assert:
     that:
       - item.boot is boolean
     quiet: yes
@@ -51,7 +51,7 @@
     - item.boot is defined
 
 - name: test if item.fstype in mount_requests is set correctly
-  assert:
+  ansible.builtin.assert:
     that:
       - item.fstype is string
       - item.fstype in [ "ext3", "ext4", "iso9660", "nfs", "none", "xfs" ]
@@ -63,7 +63,7 @@
     - item.fstype is defined
 
 - name: test if item.path in mount_requests is set correctly
-  assert:
+  ansible.builtin.assert:
     that:
       - item.path is defined
       - item.path is string
@@ -73,7 +73,7 @@
     label: "{{ item.path }}"
 
 - name: test if item.state in mount_requests is set correctly
-  assert:
+  ansible.builtin.assert:
     that:
       - item.state is defined
       - item.state is string
