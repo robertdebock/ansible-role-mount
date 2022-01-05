@@ -4,4 +4,4 @@
   command:
     cmd: swapon -a
   when:
-    - "'swap' in {{ mount_requests }}"
+    - mount_requests | search("swap")

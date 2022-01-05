@@ -63,6 +63,11 @@ mount_default_group: root
 #     opts: bind
 #     state: mounted
 #     fstype: none
+#   - path: swap
+#     src: /dev/data/swap
+#     state: mounted
+#     fstype: swap
+#     opts: sw
 ```
 
 ## [Requirements](#requirements)
