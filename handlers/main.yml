@@ -1,0 +1,7 @@
+---
+
+- name: run swapon
+  command:
+    cmd: swapon -a
+  when:
+    - "'swap' in {{ mount_requests }}"

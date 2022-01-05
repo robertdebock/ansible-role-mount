@@ -54,7 +54,7 @@
   ansible.builtin.assert:
     that:
       - item.fstype is string
-      - item.fstype in [ "ext3", "ext4", "iso9660", "nfs", "none", "xfs" ]
+      - item.fstype in [ "ext3", "ext4", "iso9660", "nfs", "none", "swap", "xfs" ]
     quiet: yes
   loop: "{{ mount_requests }}"
   loop_control:
