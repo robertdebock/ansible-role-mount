@@ -22,7 +22,6 @@ This example is taken from `molecule/default/converge.yml` and is tested on each
         - path: /mnt/tmp
           src: /tmp
           opts: bind
-          state: mounted
           fstype: none
           mode: "1777"
 ```
@@ -61,11 +60,9 @@ mount_default_group: root
 #   - path: /mnt/tmp
 #     src: /tmp
 #     opts: bind
-#     state: mounted
 #     fstype: none
 #   - path: swap
 #     src: /dev/data/swap
-#     state: mounted
 #     fstype: swap
 #     opts: sw
 ```

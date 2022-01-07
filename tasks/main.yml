@@ -31,7 +31,7 @@
     passno: "{{ item.passno | default(omit) }}"
     path: "{{ item.path }}"
     src: "{{ item.src | default(omit) }}"
-    state: "{{ item.state }}"
+    state: "{{ item.state | default('mounted') }}"
   loop: "{{ mount_requests }}"
   loop_control:
     label: "{{ item.path }}"

@@ -14,10 +14,8 @@ mount_default_group: root
 #   - path: /mnt/tmp
 #     src: /tmp
 #     opts: bind
-#     state: mounted
 #     fstype: none
 #   - path: swap
 #     src: /dev/data/swap
-#     state: mounted
 #     fstype: swap
 #     opts: sw
