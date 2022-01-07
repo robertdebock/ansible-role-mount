@@ -37,6 +37,5 @@
     label: "{{ item.path }}"
   when:
     - mount_requests is defined
-    - item.fstype != "swap"
   notify:
     - run swapon
