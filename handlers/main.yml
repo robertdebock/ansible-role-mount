@@ -4,4 +4,4 @@
   ansible.builtin.command:
     cmd: swapon -a
   when:
-    - mount_requests | regex_search('(swap)')
+    - mount_requests | regex_search("swap")
