@@ -2,9 +2,9 @@
 
 Configure mounts
 
-|GitHub|GitLab|Quality|Downloads|Version|
-|------|------|-------|---------|-------|
-|[![github](https://github.com/robertdebock/ansible-role-mount/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-mount/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-mount/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-mount)|[![quality](https://img.shields.io/ansible/quality/51485)](https://galaxy.ansible.com/robertdebock/mount)|[![downloads](https://img.shields.io/ansible/role/d/51485)](https://galaxy.ansible.com/robertdebock/mount)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-mount.svg)](https://github.com/robertdebock/ansible-role-mount/releases/)|
+|GitHub|GitLab|Downloads|Version|
+|------|------|---------|-------|
+|[![github](https://github.com/robertdebock/ansible-role-mount/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-mount/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-mount/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-mount)|[![downloads](https://img.shields.io/ansible/role/d/24544)](https://galaxy.ansible.com/robertdebock/mount)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-mount.svg)](https://github.com/robertdebock/ansible-role-mount/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -108,7 +108,7 @@ The minimum version of Ansible required is 2.12, tests have been done to:
 - The current version.
 - The development version.
 
-If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-mount/issues)
+If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-mount/issues).
 
 ## [License](#license)
 
