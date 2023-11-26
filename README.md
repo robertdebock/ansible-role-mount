@@ -1,4 +1,4 @@
-# Ansible role [mount](#mount)
+# [Ansible role mount](#mount)
 
 Configure mounts
 
