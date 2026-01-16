@@ -2,8 +2,9 @@
 # tasks file for mount
 
 - name: Import assert.yml
-  ansible.builtin.import_tasks: assert.yml
-  run_once: yes
+  ansible.builtin.import_tasks:
+    file: assert.yml
+  run_once: true
   delegate_to: localhost
 
 - name: Process mount_requests
